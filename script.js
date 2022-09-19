@@ -1,7 +1,7 @@
 console.log("rock paper scissors");
 
 function getComputerChoice(){
-    let choices = ['Rock','Paper','Scissors'];
+    let choices = ['rock','paper','scissors'];
     let num = Math.floor(Math.random() * 3);
     return (choices[num]);
 }
@@ -30,7 +30,59 @@ function playRound(playerSelection, computerSelection){
         return ("win");
     }
 }
+var rock = document.getElementById('rock-button');
+rock.addEventListener('click', runRock);
 
+var paper = document.getElementById('paper-button');
+paper.addEventListener('click', runPaper);
+
+var scissors = document.getElementById('scissors-button');
+scissors.addEventListener('click', runScissors);
+
+
+function runRock(){
+    console.log('Rock selected');
+    let resultRock = playRound('rock', getComputerChoice());
+    
+    var container = document.querySelector("body");
+    var result = document.createElement('div');
+    result.classList.add('result-content');
+    result.textContent = resultRock;
+    container.appendChild(result);
+}
+function runPaper(){
+    console.log('Paper selected');
+    let resultPaper = playRound('paper', getComputerChoice());
+
+    var container = document.querySelector("body");
+    var result = document.createElement('div');
+    result.classList.add('result-content');
+    result.textContent = resultPaper;
+    container.appendChild(result);
+}
+function runScissors(){
+    console.log('Scissors selected');
+    let resultScissors = playRound('scissors', getComputerChoice());
+
+    var container = document.querySelector("body");
+    var result = document.createElement('div');
+    result.classList.add('result-content');
+    result.textContent = resultScissors;
+    container.appendChild(result);
+}
+
+
+
+
+
+
+
+// var container = document.querySelector(".container");
+// var result = document.createElement('div');
+// result.classList.add('result-content');
+// result.textContent = resultRock;
+// container.appendChild(result);
+/*
 function game(){
     let outcome;
     let playerWins = 0;
@@ -56,7 +108,7 @@ function game(){
     }
 }
 
-
+*/
 
 /* 
  if (playerSelection == computerSelection) {
@@ -76,4 +128,3 @@ function game(){
     }
 */
 
-game();
