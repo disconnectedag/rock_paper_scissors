@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.result-content {
+    padding-top: 20px;
+    text-align: center;
+}
